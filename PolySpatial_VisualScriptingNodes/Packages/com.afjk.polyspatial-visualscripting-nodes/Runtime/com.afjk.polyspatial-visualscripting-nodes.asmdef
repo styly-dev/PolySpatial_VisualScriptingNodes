@@ -1,0 +1,23 @@
+{
+    "name": "com.afjk.polyspatial-visualscripting-nodes",
+    "rootNamespace": "",
+    "references": [
+        "GUID:21b0c8d1703a94250bfac916590cea4f",
+        "GUID:ea715009a4efd4c6cbc85be3ae097dd3",
+        "GUID:315d634a9ac6d460a9515f5a56be6311",
+        "GUID:ae3d1603ce9534ff5a9eb62408568574",
+        "GUID:4fe4a1be2f2c04eecbd2036d47b4b310",
+        "GUID:824153c2cc43465fb836238a915d1ee6",
+        "GUID:03dd33a67a728f341a2ac191285766b1",
+        ""
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
