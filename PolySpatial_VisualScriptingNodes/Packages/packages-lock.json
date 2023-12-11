@@ -42,7 +42,7 @@
     },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
-      "depth": 3,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -262,7 +262,7 @@
     },
     "com.unity.xr.arfoundation": {
       "version": "5.1.0",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0",
@@ -317,7 +317,7 @@
     },
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.10",
-      "depth": 3,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
@@ -327,7 +327,7 @@
     },
     "com.unity.xr.management": {
       "version": "4.4.0",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0",
@@ -339,7 +339,7 @@
     },
     "com.unity.xr.visionos": {
       "version": "0.6.3",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.xr.arfoundation": "5.1.0",

@@ -36,8 +36,14 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - PolySpatial
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PolySpatial
+    uniqueID: 830834713
+    locked: 0
+  - name: PolySpatialUI
+    uniqueID: 2168679765
     locked: 0
