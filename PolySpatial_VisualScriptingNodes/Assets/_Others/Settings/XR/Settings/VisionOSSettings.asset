@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VisionOSSettings
   m_EditorClassIdentifier: 
   m_AppMode: 0
-  m_HandsTrackingUsageDescription: 
-  m_WorldSensingUsageDescription: 
+  m_HandsTrackingUsageDescription: Hand tracking will be used for interactive contents.
+  m_WorldSensingUsageDescription: World sensing will be used for interactive contents.
