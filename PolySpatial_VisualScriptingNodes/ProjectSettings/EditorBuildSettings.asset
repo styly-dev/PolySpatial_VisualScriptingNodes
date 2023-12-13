@@ -5,9 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Samples_Dev/Sample1/1. Tap Sample.unity
+    guid: 7b294629228994facac12f99aa0c558d
   m_configObjects:
     UnityEditor.XR.VisionOS.VisionOSSettings: {fileID: 11400000, guid: 6117d30d9b0544b9e85c6fa96feac5b7,
       type: 2}
