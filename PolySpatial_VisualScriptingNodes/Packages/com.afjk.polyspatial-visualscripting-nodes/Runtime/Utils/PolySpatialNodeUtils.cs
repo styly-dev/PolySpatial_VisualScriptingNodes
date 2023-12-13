@@ -9,12 +9,32 @@ namespace PolyspatialVisualScriptingNodes
     {
         public static void SetTappable(GameObject gameObject)
         {
-            gameObject.AddComponent<Attr_Tappable>();
+            if (gameObject.GetComponent<Attr_Tappable>() == null)
+            {
+                gameObject.AddComponent<Attr_Tappable>();
+            }
         }
 
         public static void SetDraggable(GameObject gameObject)
         {
-            gameObject.AddComponent<Attr_Draggable>();
+            if (gameObject.GetComponent<Attr_Draggable>() == null)
+            {
+                gameObject.AddComponent<Attr_Draggable>();
+            }
+        }
+
+        public static void InitializeEventNode()
+        {
+            AddPolyInputManagerToHierarchy();
+        }
+
+        private static void AddPolyInputManagerToHierarchy()
+        {
+            if (GameObject.Find(nameof(PolyInputManager)) == null)
+            {
+                GameObject polyInputManager = new GameObject(nameof(PolyInputManager));
+                polyInputManager.AddComponent<PolyInputManager>();
+            }
         }
     }
 }

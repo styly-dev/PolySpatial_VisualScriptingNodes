@@ -7,15 +7,12 @@ using UnityEditor.UI;
 
 namespace PolyspatialVisualScriptingNodes
 {
-    
-
     [UnitTitle("Make object tappable")]
     [UnitShortTitle("Make Tappable")]
     [UnitCategory("Polyspatial")]
     [UnitSubtitle("Game Object will be tapped by Polyspatial")]
     public class MakeObjectTappable : Unit
     {
-
         [DoNotSerialize]
         [PortLabelHidden]
         [NullMeansSelf]
@@ -29,15 +26,11 @@ namespace PolyspatialVisualScriptingNodes
         [Inspectable, UnitHeaderInspectable("Input as GameObject List")]
         public bool inputAsGameobjectListFlag { get; set; } = false;
 
-
-
         [DoNotSerialize]
         public ControlInput inputTrigger;
 
         [DoNotSerialize]
         public ControlOutput outputTrigger;
-
-
 
         protected override void Definition()
         {
@@ -58,6 +51,8 @@ namespace PolyspatialVisualScriptingNodes
 
         private ControlOutput Enter(Flow flow)
         {
+            Debug.Log("MakeObjectTappable");
+
             if (inputAsGameobjectListFlag)
             {
                 List<GameObject> gameObjectList = flow.GetValue<List<GameObject>>(gameObjectListToBeTapped);
@@ -71,10 +66,7 @@ namespace PolyspatialVisualScriptingNodes
                 GameObject gameObject = flow.GetValue<GameObject>(gameObjectToBeTapped);
                 PolySpatialNodeUtils.SetTappable(gameObject);
             }
-
             return outputTrigger;
         }
-
     }
-
 }

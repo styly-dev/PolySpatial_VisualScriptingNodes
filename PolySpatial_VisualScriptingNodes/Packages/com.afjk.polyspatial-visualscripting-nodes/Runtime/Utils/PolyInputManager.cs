@@ -22,7 +22,6 @@ namespace PolyspatialVisualScriptingNodes
         void Update()
         {
             var activeTouches = Touch.activeTouches;
-
             if (activeTouches.Count > 0)
             {
                 var primaryTouchData = EnhancedSpatialPointerSupport.GetPointerState(activeTouches[0]);
@@ -30,15 +29,10 @@ namespace PolyspatialVisualScriptingNodes
                 {
                     if (primaryTouchData.Kind == SpatialPointerKind.IndirectPinch || primaryTouchData.Kind == SpatialPointerKind.Touch)
                     {
-                        var TouchedObject = primaryTouchData.targetObject;
-                        Debug.Log("TouchedObject: " + TouchedObject.name);
+                        if(primaryTouchData.targetObject.GetComponent<Attr_Tappable>() != null){
+                            EventBus.Trigger(EventNames.OnTapEvent, primaryTouchData);
+                        }
 
-                        EventBus.Trigger(EventNames.MyCustomEvent, 1);
-                        
-                        //EventBus.Trigger(EventNames.MyCustomEvent3, 3);
-                        EventBus.Trigger(EventNames.MyCustomEvent3, primaryTouchData);
-
-                        EventBus.Trigger(EventNames.OnTapEvent, TouchedObject);
                         
                     }
                 }
