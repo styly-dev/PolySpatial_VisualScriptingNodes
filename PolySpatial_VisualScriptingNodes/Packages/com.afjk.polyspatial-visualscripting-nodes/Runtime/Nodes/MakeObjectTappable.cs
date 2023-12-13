@@ -51,8 +51,6 @@ namespace PolyspatialVisualScriptingNodes
 
         private ControlOutput Enter(Flow flow)
         {
-            Debug.Log("MakeObjectTappable");
-
             if (inputAsGameobjectListFlag)
             {
                 List<GameObject> gameObjectList = flow.GetValue<List<GameObject>>(gameObjectListToBeTapped);
