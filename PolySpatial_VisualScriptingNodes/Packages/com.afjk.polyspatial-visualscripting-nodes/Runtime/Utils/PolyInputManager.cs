@@ -8,11 +8,12 @@ using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 namespace PolyspatialVisualScriptingNodes
 {
+    /// <summary>
+    /// PolyInputManager for hundle input from Polyspatial
+    /// This script will call Visual Scripting custom nodes when tap, drag, etc. events are detected
+    /// </summary>
     public class PolyInputManager : MonoBehaviour
     {
-        [SerializeField]
-        Transform m_InputAxisTransform;
-
         void OnEnable()
         {
             // enable enhanced touch support to use active touches for properly pooling input phases
@@ -32,8 +33,6 @@ namespace PolyspatialVisualScriptingNodes
                         if(primaryTouchData.targetObject.GetComponent<Attr_Tappable>() != null){
                             EventBus.Trigger(EventNames.OnTapEvent, primaryTouchData);
                         }
-
-                        
                     }
                 }
             }
