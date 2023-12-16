@@ -1,9 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
-using UnityEngine.InputSystem;
-using UnityEditor.UI;
 
 namespace PolyspatialVisualScriptingNodes
 {

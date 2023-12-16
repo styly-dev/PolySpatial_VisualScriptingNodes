@@ -1,0 +1,11 @@
+<linker>
+  <assembly fullname="Unity.VisualScripting.Core" preserve="all" />
+  <assembly fullname="Unity.VisualScripting.Flow" preserve="all" />
+  <assembly fullname="Unity.VisualScripting.State" preserve="all" />
+  <assembly fullname="com.afjk.polyspatial-visualscripting-nodes">
+    <type fullname="PolyspatialVisualScriptingNodes.MakeObjectTappable" preserve="all" />
+  </assembly>
+  <assembly fullname="com.afjk.polyspatial-visualscripting-nodes">
+    <type fullname="PolyspatialVisualScriptingNodes.OnTapEvent" preserve="all" />
+  </assembly>
+</linker>
