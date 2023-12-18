@@ -87,3 +87,5 @@ crashlytics-build.properties
 /[Aa]ssets/temp.meta
 /[Aa]ssets/_temp/*
 /[Aa]ssets/_temp.meta
+
+.idea
