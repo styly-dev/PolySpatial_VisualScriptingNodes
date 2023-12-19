@@ -35,6 +35,14 @@ namespace PolyspatialVisualScriptingNodes
                 GameObject polyInputManager = new GameObject(nameof(PolyInputManager));
                 polyInputManager.AddComponent<PolyInputManager>();
             }
+            
+            if (GameObject.Find(nameof(PolySpatialDragInputManager)) == null)
+            {
+                GameObject polyInputManager = new GameObject(nameof(PolySpatialDragInputManager));
+                polyInputManager.AddComponent<PolySpatialDragInputManager>();
+            }
+
+            
         }
     }
 }
