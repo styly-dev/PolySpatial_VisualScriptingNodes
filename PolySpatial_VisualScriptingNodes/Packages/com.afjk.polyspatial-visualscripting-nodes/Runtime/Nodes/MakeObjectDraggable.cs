@@ -51,14 +51,14 @@ namespace PolyspatialVisualScriptingNodes
             if (inputAsGameobjectListFlag)
             {
                 List<GameObject> gameObjectList = flow.GetValue<List<GameObject>>(gameObjectListToBeDragged);
-                foreach (GameObject gameObject in gameObjectList)
+                foreach (var gameObject in gameObjectList)
                 {
                     PolySpatialNodeUtils.SetDraggable(gameObject);
                 }
             }
             else
             {
-                GameObject gameObject = flow.GetValue<GameObject>(gameObjectToBeDragged);
+                var gameObject = flow.GetValue<GameObject>(gameObjectToBeDragged);
                 PolySpatialNodeUtils.SetDraggable(gameObject);
             }
             return outputTrigger;
