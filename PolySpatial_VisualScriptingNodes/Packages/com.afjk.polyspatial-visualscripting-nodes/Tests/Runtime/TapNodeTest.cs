@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using PolySpatialVisualScripting.Utils;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.TestTools;
 
 namespace PolySpatialVisualScripting.Test
 {
-    public class PolySpatialVisualScriptingNodesTest
+    public class TapNodeTest
     {
         // SceneName
         private const string SceneName = "TapTestScene";
@@ -42,6 +43,23 @@ namespace PolySpatialVisualScripting.Test
             }
         }
 
+        [UnityTest]
+        public IEnumerator TapObjectTest()
+        {
+            PlayModeUtility.LoadScene(SceneName);
+            yield return null;
+
+            var targetObject = GameObject.Find("TargetSingle");
+            Assert.That(targetObject, Is.Not.Null);
+
+            // targetObjectをTapする
+            var inputManagerComponent = GameObject.Find("PolySpatialTapInputManager").GetComponent<PolySpatialTapInputManager>();
+            inputManagerComponent.InputManager = new DummyTapInputManager(targetObject, Vector3.zero);
+            yield return null;
+            
+            // Tap検出
+            Assert.That(targetObject.transform.position, Is.EqualTo(Vector3.zero));
+        }
     }
     
 }
