@@ -27,10 +27,10 @@ namespace PolySpatialVisualScripting.Utils
 
         private static void AddPolyInputManagerToHierarchy()
         {
-            if (GameObject.Find(nameof(PolyInputManager)) == null)
+            if (GameObject.Find(nameof(PolySpatialTapInputManager)) == null)
             {
-                GameObject polyInputManager = new GameObject(nameof(PolyInputManager));
-                polyInputManager.AddComponent<PolyInputManager>();
+                GameObject polyInputManager = new GameObject(nameof(PolySpatialTapInputManager));
+                polyInputManager.AddComponent<PolySpatialTapInputManager>();
             }
             
             if (GameObject.Find(nameof(PolySpatialDragInputManager)) == null)

@@ -13,7 +13,7 @@ namespace PolySpatialVisualScripting.Utils
     /// PolyInputManager for handle input from PolySpatial
     /// This script will call Visual Scripting custom nodes when tap, drag, etc. events are detected
     /// </summary>
-    public class PolyInputManager : MonoBehaviour
+    public class PolySpatialTapInputManager : MonoBehaviour
     {
         void OnEnable()
         {
