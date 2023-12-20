@@ -62,6 +62,32 @@ namespace PolySpatialVisualScripting.Test
             // Tap検出
             Assert.That(targetObject.transform.position, Is.EqualTo(Vector3.zero));
         }
+        
+        [UnityTest]
+        public IEnumerator TapObjectsTest()
+        {
+            PlayModeUtility.LoadScene(SceneName);
+            yield return null;
+
+            var targetObjectParent = GameObject.Find("TargetMultiple");
+            Assert.That(targetObjectParent, Is.Not.Null);
+
+            var inputManagerComponent = GameObject.Find("PolySpatialTapInputManager").GetComponent<PolySpatialTapInputManager>();
+            
+            foreach (Transform targetObjectTransform in targetObjectParent.transform)
+            {
+                var targetObject = targetObjectTransform.gameObject;
+                Debug.Log(targetObject.name);
+                Assert.That(targetObject.transform.position, Is.Not.EqualTo(Vector3.zero));
+
+                // targetObjectをTapする
+                inputManagerComponent.InputProcessor = new DummyTapInputProcessor(targetObject, Vector3.zero);
+                yield return null;
+
+                // Tap検出
+                Assert.That(targetObject.transform.position, Is.EqualTo(Vector3.zero));
+            }
+        }
     }
     
 }
