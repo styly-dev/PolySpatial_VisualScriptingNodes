@@ -1,11 +1,11 @@
 using Unity.PolySpatial;
 using UnityEngine;
 
-/// <summary>
-/// This script is used to make a GameObject draggable by Polyspatial
-/// </summary>
 namespace PolySpatialVisualScriptingNodes
 {
+    /// <summary>
+    /// This script is used to make a GameObject draggable by PolySpatial
+    /// </summary>
     public class Attr_Draggable : MonoBehaviour
     {
         void Start()
