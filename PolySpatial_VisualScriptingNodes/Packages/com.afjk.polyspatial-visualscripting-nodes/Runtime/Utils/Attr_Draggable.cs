@@ -1,7 +1,7 @@
 using Unity.PolySpatial;
 using UnityEngine;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
     /// <summary>
     /// This script is used to make a GameObject draggable by PolySpatial

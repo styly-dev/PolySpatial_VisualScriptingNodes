@@ -1,3 +1,4 @@
+using PolySpatialVisualScripting.Nodes;
 using Unity.PolySpatial.InputDevices;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
@@ -7,7 +8,7 @@ using UnityEngine.InputSystem.LowLevel;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
     /// <summary>
     /// PolyInputManager for handle input from PolySpatial

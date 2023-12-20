@@ -1,8 +1,9 @@
+using PolySpatialVisualScripting.Utils;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Nodes
 {
 
     [UnitTitle("On End Dragging Event")]

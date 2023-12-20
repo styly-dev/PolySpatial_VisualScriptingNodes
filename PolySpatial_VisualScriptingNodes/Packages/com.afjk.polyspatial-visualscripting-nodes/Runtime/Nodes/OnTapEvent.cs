@@ -1,8 +1,9 @@
+using PolySpatialVisualScripting.Utils;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Nodes
 {
 
     [UnitTitle("On Tap Event")]//The Custom Scripting Event node to receive the Event. Add "On" to the node title as an Event naming convention.

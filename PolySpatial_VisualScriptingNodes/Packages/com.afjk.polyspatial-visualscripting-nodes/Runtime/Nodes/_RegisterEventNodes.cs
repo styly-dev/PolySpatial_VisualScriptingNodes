@@ -1,4 +1,4 @@
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Nodes
 {
     public static class EventNames
     {

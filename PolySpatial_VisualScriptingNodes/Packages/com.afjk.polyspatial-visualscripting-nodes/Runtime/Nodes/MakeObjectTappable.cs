@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using PolySpatialVisualScripting.Utils;
 using UnityEngine;
 using Unity.VisualScripting;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Nodes
 {
     [UnitTitle("Make object tappable")]
     [UnitShortTitle("Make Tappable")]

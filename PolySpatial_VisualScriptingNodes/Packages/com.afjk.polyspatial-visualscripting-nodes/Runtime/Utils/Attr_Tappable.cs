@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.PolySpatial;
 using UnityEngine;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
     /// <summary>
     /// This script is used to make a GameObject Tappable by PolySpatial

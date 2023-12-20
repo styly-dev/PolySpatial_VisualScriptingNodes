@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PolySpatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
     public class PolySpatialNodeUtils : MonoBehaviour
     {
