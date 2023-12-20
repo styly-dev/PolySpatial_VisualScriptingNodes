@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using Unity.PolySpatial;
 using Unity.PolySpatial.Internals;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScriptingNodes
 {
     public class PolySpatialNodeUtils : MonoBehaviour
     {

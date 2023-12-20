@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScriptingNodes
 {
     [UnitTitle("Make object tappable")]
     [UnitShortTitle("Make Tappable")]
-    [UnitCategory("Polyspatial")]
-    [UnitSubtitle("Game Object will be tapped by Polyspatial")]
+    [UnitCategory("PolySpatial")]
+    [UnitSubtitle("Game Object will be tapped by PolySpatial")]
     public class MakeObjectTappable : Unit
     {
         [DoNotSerialize]

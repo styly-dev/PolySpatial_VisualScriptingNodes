@@ -2,11 +2,11 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScriptingNodes
 {
 
     [UnitTitle("On Begin Dragging Event")]
-    [UnitCategory("Events\\Plyspatial")]
+    [UnitCategory("Events\\PolySpatial")]
     public class OnBeginDraggingEvent : EventUnit<SpatialPointerState>
     {
         [Serialize]

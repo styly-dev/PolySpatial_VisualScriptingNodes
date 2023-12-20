@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// This script is used to make a GameObject draggable by Polyspatial
 /// </summary>
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScriptingNodes
 {
     public class Attr_Tappable : MonoBehaviour
     {

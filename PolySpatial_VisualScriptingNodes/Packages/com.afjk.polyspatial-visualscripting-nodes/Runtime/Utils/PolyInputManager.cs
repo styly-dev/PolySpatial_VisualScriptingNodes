@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.LowLevel;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScriptingNodes
 {
     /// <summary>
     /// PolyInputManager for hundle input from Polyspatial

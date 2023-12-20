@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScriptingNodes
 {
     [UnitTitle("Make object draggable")]
     [UnitShortTitle("Make Draggable")]
-    [UnitCategory("Polyspatial")]
-    [UnitSubtitle("Game Object will be draggable by Polyspatial")]
+    [UnitCategory("PolySpatial")]
+    [UnitSubtitle("Game Object will be draggable by PolySpatial")]
     public class MakeObjectDraggable : Unit
     {
         [DoNotSerialize]
