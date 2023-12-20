@@ -1,3 +1,4 @@
+using PolySpatialVisualScripting.Nodes;
 using Unity.PolySpatial.InputDevices;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,10 +7,10 @@ using UnityEngine.InputSystem.LowLevel;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
     /// <summary>
-    /// PolyInputManager for hundle input from Polyspatial
+    /// PolyInputManager for handle input from PolySpatial
     /// This script will call Visual Scripting custom nodes when tap, drag, etc. events are detected
     /// </summary>
     public class PolyInputManager : MonoBehaviour
@@ -37,12 +38,5 @@ namespace PolyspatialVisualScriptingNodes
                 }
             }
         }
-
-
-
-
-
     }
-
-
 }

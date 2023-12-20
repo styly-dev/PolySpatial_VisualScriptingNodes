@@ -1,9 +1,6 @@
 using UnityEngine;
-using Unity.VisualScripting;
-using Unity.PolySpatial;
-using Unity.PolySpatial.Internals;
 
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
     public class PolySpatialNodeUtils : MonoBehaviour
     {
@@ -41,8 +38,6 @@ namespace PolyspatialVisualScriptingNodes
                 GameObject polyInputManager = new GameObject(nameof(PolySpatialDragInputManager));
                 polyInputManager.AddComponent<PolySpatialDragInputManager>();
             }
-
-            
         }
     }
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using Unity.PolySpatial;
 using UnityEngine;
 
-/// <summary>
-/// This script is used to make a GameObject draggable by Polyspatial
-/// </summary>
-namespace PolyspatialVisualScriptingNodes
+namespace PolySpatialVisualScripting.Utils
 {
+    /// <summary>
+    /// This script is used to make a GameObject Tappable by PolySpatial
+    /// </summary>
     public class Attr_Tappable : MonoBehaviour
     {
         void Start()
