@@ -16,68 +16,81 @@ namespace PolySpatialVisualScripting.Utils
     /// </summary>
     public class PolySpatialDragInputManager : MonoBehaviour
     {
-        Attr_Draggable currentSelection;
-        private Pose beginPose;
+        public IDragInputProcessor InputProcessor { get; set; }
 
         private void OnEnable()
         {
-            // enable enhanced touch support to use active touches for properly pooling input phases
-            EnhancedTouchSupport.Enable();
+            InputProcessor = new PolySpatialDragInputProcessor();
         }
 
         private void Update()
         {
+            InputProcessor.Process();
+        }
+    }
+
+    public interface IDragInputProcessor
+    {
+        public void Process();
+    }
+
+    class PolySpatialDragInputProcessor : IDragInputProcessor
+    {
+        Attr_Draggable currentSelection;
+        private Pose beginPose;
+
+        public PolySpatialDragInputProcessor()
+        {
+            EnhancedTouchSupport.Enable();
+        }
+        
+        public void Process()
+        {
             var activeTouches = Touch.activeTouches;
 
-            if (activeTouches.Count > 0)
+            if (activeTouches.Count <= 0) {return;}
+            var primaryTouchData = EnhancedSpatialPointerSupport.GetPointerState(activeTouches[0]);
+
+            if (primaryTouchData.Kind is SpatialPointerKind.DirectPinch or SpatialPointerKind.IndirectPinch)
             {
-                var primaryTouchData = EnhancedSpatialPointerSupport.GetPointerState(activeTouches[0]);
+                var targetObject = primaryTouchData.targetObject;
                 
-                if (primaryTouchData.Kind == SpatialPointerKind.DirectPinch || primaryTouchData.Kind == SpatialPointerKind.IndirectPinch)
+                if (targetObject != null)
                 {
-                    var targetObject = primaryTouchData.targetObject;
-                    if (targetObject != null)
+                    if (targetObject.TryGetComponent(out Attr_Draggable attrDraggable))
                     {
-                        if (targetObject.TryGetComponent(out Attr_Draggable attrDraggable))
+                        if (currentSelection != attrDraggable)
                         {
-                            if (currentSelection != attrDraggable)
-                            {
-                                beginPose = targetObject.transform.GetWorldPose();
-                                currentSelection = attrDraggable;
-                                currentSelection.Select(true, primaryTouchData.interactionPosition);
-                                EventBus.Trigger(EventNames.OnBeginDraggingEvent, primaryTouchData);
-                            }
-                        }
-                    }
-
-                    if (activeTouches[0].phase == TouchPhase.Moved)
-                    {
-                        if (currentSelection != null)
-                        {
-                            currentSelection.transform.SetPositionAndRotation(primaryTouchData.interactionPosition, primaryTouchData.deviceRotation * beginPose.rotation);
-                        }
-                    }
-
-                    if (activeTouches[0].phase == TouchPhase.Ended || activeTouches[0].phase == TouchPhase.Canceled)
-                    {
-                        if (currentSelection != null)
-                        {
-                            currentSelection.Select(false, primaryTouchData.interactionPosition);
-                            currentSelection = null;
-                            EventBus.Trigger(EventNames.OnEndDraggingEvent, primaryTouchData);
+                            beginPose = targetObject.transform.GetWorldPose();
+                            currentSelection = attrDraggable;
+                            currentSelection.Select(true, primaryTouchData.interactionPosition);
+                            EventBus.Trigger(EventNames.OnBeginDraggingEvent, primaryTouchData);
+                            return;
                         }
                     }
                 }
-                else
+
+                if (currentSelection == null) { return; }
+
+                switch (activeTouches[0].phase)
                 {
-                    if (currentSelection != null)
-                    {
+                    case TouchPhase.Moved:
+                        currentSelection.transform.SetPositionAndRotation(primaryTouchData.interactionPosition,
+                            primaryTouchData.deviceRotation * beginPose.rotation);
+                        break;
+                    case TouchPhase.Ended or TouchPhase.Canceled:
                         currentSelection.Select(false, primaryTouchData.interactionPosition);
                         currentSelection = null;
-                    }
+                        EventBus.Trigger(EventNames.OnEndDraggingEvent, primaryTouchData);
+                        break;
                 }
             }
+            else
+            {
+                if (currentSelection == null) {return;}
+                currentSelection.Select(false, primaryTouchData.interactionPosition);
+                currentSelection = null;
+            }
         }
-
     }
 }
