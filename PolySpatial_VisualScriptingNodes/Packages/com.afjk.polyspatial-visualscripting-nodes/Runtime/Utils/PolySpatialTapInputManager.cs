@@ -15,28 +15,27 @@ namespace PolySpatialVisualScripting.Utils
     /// </summary>
     public class PolySpatialTapInputManager : MonoBehaviour
     {
-        public ITapInputManager InputManager { get; set; }
+        public ITapInputProcessor InputProcessor { get; set; }
         
         void OnEnable()
         {
-            InputManager = new PolySpatialTapInputManager();
-            // enable enhanced touch support to use active touches for properly pooling input phases
+            InputProcessor = new PolySpatialTapInputProcessor();
         }
 
         void Update()
         {
-            InputManager.CheckAndTriggerOnTapEvent();
+            InputProcessor.CheckAndTriggerOnTapEvent();
         }
     }
 
-    public interface ITapInputManager
+    public interface ITapInputProcessor
     {
         public void CheckAndTriggerOnTapEvent();
     }
 
-    partial class PolySpatialTapInputManager : ITapInputManager
+    class PolySpatialTapInputProcessor : ITapInputProcessor
     {
-        public PolySpatialTapInputManager()
+        public PolySpatialTapInputProcessor()
         {
             EnhancedTouchSupport.Enable();
         }

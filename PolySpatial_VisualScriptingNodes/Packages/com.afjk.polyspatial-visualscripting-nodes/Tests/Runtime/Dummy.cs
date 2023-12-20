@@ -6,12 +6,12 @@ using UnityEngine.InputSystem.LowLevel;
 
 namespace PolySpatialVisualScripting.Test
 {
-    public class DummyTapInputManager : ITapInputManager
+    public class DummyTapInputProcessor : ITapInputProcessor
     {
         private GameObject target;
         private Vector3 interactionPosition;
 
-        public DummyTapInputManager(GameObject target, Vector3 interactionPosition)
+        public DummyTapInputProcessor(GameObject target, Vector3 interactionPosition)
         {
             this.target = target;
             this.interactionPosition = interactionPosition;

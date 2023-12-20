@@ -52,9 +52,11 @@ namespace PolySpatialVisualScripting.Test
             var targetObject = GameObject.Find("TargetSingle");
             Assert.That(targetObject, Is.Not.Null);
 
+            Assert.That(targetObject.transform.position, Is.Not.EqualTo(Vector3.zero));
+
             // targetObjectをTapする
             var inputManagerComponent = GameObject.Find("PolySpatialTapInputManager").GetComponent<PolySpatialTapInputManager>();
-            inputManagerComponent.InputManager = new DummyTapInputManager(targetObject, Vector3.zero);
+            inputManagerComponent.InputProcessor = new DummyTapInputProcessor(targetObject, Vector3.zero);
             yield return null;
             
             // Tap検出
