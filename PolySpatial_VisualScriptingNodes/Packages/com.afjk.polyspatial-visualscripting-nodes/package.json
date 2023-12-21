@@ -30,7 +30,7 @@
         {
             "displayName": "Usage samples",
             "description": "Contains sample Visual Scripting Graphs",
-            "path": "Samples~/Sample1"
+            "path": "Samples~"
         }
     ]
 }
