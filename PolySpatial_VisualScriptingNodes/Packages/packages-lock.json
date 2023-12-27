@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.styly.polyspatial-visualscripting-nodes": {
-      "version": "file:com.afjk.polyspatial-visualscripting-nodes",
+      "version": "file:com.styly.polyspatial-visualscripting-nodes",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
