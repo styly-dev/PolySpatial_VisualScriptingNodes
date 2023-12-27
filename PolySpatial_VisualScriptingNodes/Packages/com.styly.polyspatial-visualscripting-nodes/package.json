@@ -1,18 +1,18 @@
 {
-    "name": "com.afjk.polyspatial-visualscripting-nodes",
-    "version": "0.0.1",
+    "name": "com.styly.polyspatial-visualscripting-nodes",
+    "version": "0.0.2",
     "displayName": "PolySpatial Visual Scripting Nodes",
     "description": "Unity Visual Scripting node library for PolySpatial analyzer",
     "unity": "2022.3",
-    "documentationUrl": "https://github.com/afjk/PolySpatial_VisualScriptingNodes",
+    "documentationUrl": "https://github.com/styly-dev/PolySpatial_VisualScriptingNodes",
     "changelogUrl": "",
-    "licensesUrl": "https://github.com/afjk/PolySpatial_VisualScriptingNodes/blob/main/LICENSE",
+    "licensesUrl": "https://github.com/styly-dev/PolySpatial_VisualScriptingNodes/blob/main/LICENSE",
     "dependencies": {
         "com.unity.visualscripting": "1.9.1",
-        "com.unity.polyspatial": "0.6.3",
-        "com.unity.polyspatial.visionos": "0.6.3",
-        "com.unity.polyspatial.xr": "0.6.3",
-        "com.unity.xr.visionos": "0.6.3",
+        "com.unity.polyspatial": "0.7.1",
+        "com.unity.polyspatial.visionos": "0.7.1",
+        "com.unity.polyspatial.xr": "0.7.1",
+        "com.unity.xr.visionos": "0.7.1",
         "com.unity.render-pipelines.universal": "14.0.9"
     },
     "keywords": [
@@ -22,9 +22,9 @@
         "Visual Scripting"
     ],
     "author": {
-        "name": "afjk",
-        "email": "afjk01@gmail.com",
-        "url": "https://github.com/afjk/"
+        "name": "styly-dev",
+        "email": "info@styly.inc",
+        "url": "https://github.com/styly-dev/"
     },
     "samples": [
         {
