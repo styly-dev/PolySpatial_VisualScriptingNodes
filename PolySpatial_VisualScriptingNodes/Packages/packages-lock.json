@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "com.afjk.polyspatial-visualscripting-nodes": {
-      "version": "file:com.afjk.polyspatial-visualscripting-nodes",
+    "com.styly.polyspatial-visualscripting-nodes": {
+      "version": "file:com.styly.polyspatial-visualscripting-nodes",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
         "com.unity.visualscripting": "1.9.1",
-        "com.unity.polyspatial": "0.6.3",
-        "com.unity.polyspatial.visionos": "0.6.3",
-        "com.unity.polyspatial.xr": "0.6.3",
-        "com.unity.xr.visionos": "0.6.3",
+        "com.unity.polyspatial": "0.7.1",
+        "com.unity.polyspatial.visionos": "0.7.1",
+        "com.unity.polyspatial.xr": "0.7.1",
+        "com.unity.xr.visionos": "0.7.1",
         "com.unity.render-pipelines.universal": "14.0.9"
       }
     },
