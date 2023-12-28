@@ -9,8 +9,7 @@
         "com.unity.polyspatial": "0.7.1",
         "com.unity.polyspatial.visionos": "0.7.1",
         "com.unity.polyspatial.xr": "0.7.1",
-        "com.unity.xr.visionos": "0.7.1",
-        "com.unity.render-pipelines.universal": "10.10.1"
+        "com.unity.xr.visionos": "0.7.1"
       }
     },
     "com.unity.burst": {
