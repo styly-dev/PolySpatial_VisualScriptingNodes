@@ -1,6 +1,6 @@
 {
     "name": "com.styly.polyspatial-visualscripting-nodes",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "displayName": "PolySpatial Visual Scripting Nodes",
     "description": "Unity Visual Scripting node library for PolySpatial analyzer",
     "unity": "2022.3",
