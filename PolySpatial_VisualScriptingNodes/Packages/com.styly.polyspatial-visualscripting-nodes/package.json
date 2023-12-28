@@ -1,6 +1,6 @@
 {
     "name": "com.styly.polyspatial-visualscripting-nodes",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "displayName": "PolySpatial Visual Scripting Nodes",
     "description": "Unity Visual Scripting node library for PolySpatial analyzer",
     "unity": "2022.3",
@@ -12,8 +12,7 @@
         "com.unity.polyspatial": "0.7.1",
         "com.unity.polyspatial.visionos": "0.7.1",
         "com.unity.polyspatial.xr": "0.7.1",
-        "com.unity.xr.visionos": "0.7.1",
-        "com.unity.render-pipelines.universal": "10.10.1"
+        "com.unity.xr.visionos": "0.7.1"
     },
     "keywords": [
         "Vision OS",
