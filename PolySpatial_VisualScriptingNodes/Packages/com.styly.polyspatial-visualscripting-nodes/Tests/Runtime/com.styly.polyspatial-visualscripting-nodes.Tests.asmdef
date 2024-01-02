@@ -1,14 +1,17 @@
 {
-    "name": "com.afjk.polyspatial-visualscripting-nodes",
+    "name": "com.styly.polyspatial-visualscripting-nodes.Tests",
     "rootNamespace": "",
     "references": [
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:bdb2b9c90ba1b450c9d22bc42098b3d6",
         "GUID:21b0c8d1703a94250bfac916590cea4f",
         "GUID:ea715009a4efd4c6cbc85be3ae097dd3",
         "GUID:315d634a9ac6d460a9515f5a56be6311",
-        "GUID:ae3d1603ce9534ff5a9eb62408568574",
         "GUID:4fe4a1be2f2c04eecbd2036d47b4b310",
         "GUID:824153c2cc43465fb836238a915d1ee6",
         "GUID:03dd33a67a728f341a2ac191285766b1",
+        "GUID:ae3d1603ce9534ff5a9eb62408568574",
         "GUID:ba171b3dd2a51234ab864770f99741a5",
         "GUID:ce522b6ed64c8be4c989a1d26d0e3275",
         "GUID:a9420e37d7990b54abdef6688edbe313",
@@ -23,10 +26,15 @@
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll",
+        "Unity.PolySpatial.Core.dll"
+    ],
     "autoReferenced": true,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }
