@@ -1,36 +1,36 @@
 {
-    "name": "com.styly.polyspatial-visualscripting-nodes",
-    "version": "0.0.7",
-    "displayName": "PolySpatial Visual Scripting Nodes",
-    "description": "Unity Visual Scripting node library for PolySpatial analyzer",
-    "unity": "2022.3",
-    "documentationUrl": "https://github.com/styly-dev/PolySpatial_VisualScriptingNodes",
-    "changelogUrl": "",
-    "licensesUrl": "https://github.com/styly-dev/PolySpatial_VisualScriptingNodes/blob/main/LICENSE",
-    "dependencies": {
-        "com.unity.visualscripting": "1.9.1",
-        "com.unity.polyspatial": "0.7.1",
-        "com.unity.polyspatial.visionos": "0.7.1",
-        "com.unity.polyspatial.xr": "0.7.1",
-        "com.unity.xr.visionos": "0.7.1",
-        "com.unity.render-pipelines.universal": "14.0.9"
-    },
-    "keywords": [
-        "Vision OS",
-        "Vision Pro",
-        "Poly Spatial",
-        "Visual Scripting"
-    ],
-    "author": {
-        "name": "styly-dev",
-        "email": "info@styly.inc",
-        "url": "https://github.com/styly-dev/"
-    },
-    "samples": [
-        {
-            "displayName": "Usage samples",
-            "description": "Contains sample Visual Scripting Graphs",
-            "path": "Samples~"
-        }
-    ]
+  "name": "com.styly.polyspatial-visualscripting-nodes",
+  "version": "0.0.9",
+  "displayName": "PolySpatial Visual Scripting Nodes",
+  "description": "Unity Visual Scripting node library for PolySpatial analyzer",
+  "unity": "2022.3",
+  "documentationUrl": "https://github.com/styly-dev/PolySpatial_VisualScriptingNodes",
+  "changelogUrl": "",
+  "licensesUrl": "https://github.com/styly-dev/PolySpatial_VisualScriptingNodes/blob/main/LICENSE",
+  "dependencies": {
+    "com.unity.visualscripting": "1.9.1",
+    "com.unity.polyspatial": "0.7.1",
+    "com.unity.polyspatial.visionos": "0.7.1",
+    "com.unity.polyspatial.xr": "0.7.1",
+    "com.unity.xr.visionos": "0.7.1",
+    "com.unity.render-pipelines.universal": "14.0.9"
+  },
+  "keywords": [
+    "Vision OS",
+    "Vision Pro",
+    "Poly Spatial",
+    "Visual Scripting"
+  ],
+  "author": {
+    "name": "styly-dev",
+    "email": "info@styly.inc",
+    "url": "https://github.com/styly-dev/"
+  },
+  "samples": [
+    {
+      "displayName": "Usage samples",
+      "description": "Contains sample Visual Scripting Graphs",
+      "path": "Samples~"
+    }
+  ]
 }
