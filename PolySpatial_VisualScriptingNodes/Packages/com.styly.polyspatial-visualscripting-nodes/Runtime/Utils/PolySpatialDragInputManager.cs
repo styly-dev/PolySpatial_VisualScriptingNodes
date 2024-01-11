@@ -63,7 +63,8 @@ namespace PolySpatialVisualScripting.Utils
                         {
                             beginPose = targetObject.transform.GetWorldPose();
                             currentSelection = attrDraggable;
-                            currentSelection.Select(true, primaryTouchData.interactionPosition);
+                            currentSelection.Select(true, new Pose(primaryTouchData.interactionPosition,
+                                primaryTouchData.deviceRotation * beginPose.rotation));
                             EventBus.Trigger(EventNames.OnBeginDraggingEvent, primaryTouchData);
                             return;
                         }
@@ -75,11 +76,12 @@ namespace PolySpatialVisualScripting.Utils
                 switch (activeTouches[0].phase)
                 {
                     case TouchPhase.Moved:
-                        currentSelection.transform.SetPositionAndRotation(primaryTouchData.interactionPosition,
-                            primaryTouchData.deviceRotation * beginPose.rotation);
+                        currentSelection.MoveTo(new Pose(primaryTouchData.interactionPosition,
+                            primaryTouchData.deviceRotation * beginPose.rotation));
                         break;
                     case TouchPhase.Ended or TouchPhase.Canceled:
-                        currentSelection.Select(false, primaryTouchData.interactionPosition);
+                        currentSelection.Select(false, new Pose(primaryTouchData.interactionPosition,
+                            primaryTouchData.deviceRotation * beginPose.rotation));
                         currentSelection = null;
                         EventBus.Trigger(EventNames.OnEndDraggingEvent, primaryTouchData);
                         break;
@@ -88,7 +90,8 @@ namespace PolySpatialVisualScripting.Utils
             else
             {
                 if (currentSelection == null) {return;}
-                currentSelection.Select(false, primaryTouchData.interactionPosition);
+                currentSelection.Select(false, new Pose(primaryTouchData.interactionPosition,
+                    primaryTouchData.deviceRotation * beginPose.rotation));
                 currentSelection = null;
             }
         }
