@@ -287,7 +287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Dimensions: {x: 1, y: 1, z: 1}
   m_IsUniformScale: 0
-  m_OutputConfiguration: {fileID: 11400000, guid: 1ed1364bdc0df4c939bcea81b3f6c64d,
+  m_OutputConfiguration: {fileID: 11400000, guid: 05e144675d2634a12becc90aed6ace78,
     type: 2}
   CullingMask:
     serializedVersion: 2
