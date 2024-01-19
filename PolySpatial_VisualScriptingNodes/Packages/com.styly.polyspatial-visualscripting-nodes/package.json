@@ -1,6 +1,6 @@
 {
   "name": "com.styly.polyspatial-visualscripting-nodes",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "displayName": "PolySpatial Visual Scripting Nodes",
   "description": "Unity Visual Scripting node library for PolySpatial analyzer",
   "unity": "2022.3",
@@ -28,9 +28,14 @@
   },
   "samples": [
     {
-      "displayName": "Usage samples",
-      "description": "Contains sample Visual Scripting Graphs",
-      "path": "Samples~"
+      "displayName": "Interaction samples",
+      "description": "Contains interaction sample Visual Scripting Graphs",
+      "path": "Samples~/Interaction Samples"
+    },
+    {
+      "displayName": "Other samples",
+      "description": "Contains other sample Visual Scripting Graphs",
+      "path": "Samples~/Other samples"
     }
   ]
 }
