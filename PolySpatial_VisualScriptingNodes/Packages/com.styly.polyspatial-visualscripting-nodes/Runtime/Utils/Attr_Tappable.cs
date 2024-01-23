@@ -12,7 +12,7 @@ namespace PolySpatialVisualScripting.Utils
     {
         void Start()
         {
-        this.gameObject.AddComponent<PolySpatialHoverEffect>();
+        this.gameObject.AddComponent<VisionOSHoverEffect>();
         }
     }
 }
