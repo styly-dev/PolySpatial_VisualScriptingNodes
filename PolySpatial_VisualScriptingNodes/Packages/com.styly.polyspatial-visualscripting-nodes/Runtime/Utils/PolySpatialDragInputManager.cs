@@ -64,7 +64,7 @@ namespace PolySpatialVisualScripting.Utils
                             beginPose = targetObject.transform.GetWorldPose();
                             currentSelection = attrDraggable;
                             currentSelection.Select(true, new Pose(primaryTouchData.interactionPosition,
-                                primaryTouchData.deviceRotation * beginPose.rotation));
+                                primaryTouchData.inputDeviceRotation * beginPose.rotation));
                             EventBus.Trigger(EventNames.OnBeginDraggingEvent, primaryTouchData);
                             return;
                         }
@@ -77,11 +77,11 @@ namespace PolySpatialVisualScripting.Utils
                 {
                     case TouchPhase.Moved:
                         currentSelection.MoveTo(new Pose(primaryTouchData.interactionPosition,
-                            primaryTouchData.deviceRotation * beginPose.rotation));
+                            primaryTouchData.inputDeviceRotation * beginPose.rotation));
                         break;
                     case TouchPhase.Ended or TouchPhase.Canceled:
                         currentSelection.Select(false, new Pose(primaryTouchData.interactionPosition,
-                            primaryTouchData.deviceRotation * beginPose.rotation));
+                            primaryTouchData.inputDeviceRotation * beginPose.rotation));
                         currentSelection = null;
                         EventBus.Trigger(EventNames.OnEndDraggingEvent, primaryTouchData);
                         break;
@@ -91,7 +91,7 @@ namespace PolySpatialVisualScripting.Utils
             {
                 if (currentSelection == null) {return;}
                 currentSelection.Select(false, new Pose(primaryTouchData.interactionPosition,
-                    primaryTouchData.deviceRotation * beginPose.rotation));
+                    primaryTouchData.inputDeviceRotation * beginPose.rotation));
                 currentSelection = null;
             }
         }
