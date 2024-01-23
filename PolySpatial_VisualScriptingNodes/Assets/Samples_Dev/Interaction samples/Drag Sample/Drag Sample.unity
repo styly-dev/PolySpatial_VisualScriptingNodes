@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 1705900168}
   - component: {fileID: 1705900167}
   m_Layer: 0
-  m_Name: Cubes (3. Drag Sample C)
+  m_Name: Cubes-Rigidbody (2. Drag Sample B)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: 1a68f56975860477d8e5e23d328983c6, type: 2}
+    - {fileID: 11400000, guid: 2c4aec8bd3b8c45fea39f53f34c1e807, type: 2}
 --- !u!114 &1705900168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: 28bb5dec7edeb467884f49f5092bf217, type: 2}
+    - {fileID: 11400000, guid: ff50c6fced0cd40918f89c2bc8f50db0, type: 2}
 --- !u!114 &1859077118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,7 +1645,7 @@ MonoBehaviour:
   _data:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: 1a68f56975860477d8e5e23d328983c6, type: 2}
+    - {fileID: 11400000, guid: 2c4aec8bd3b8c45fea39f53f34c1e807, type: 2}
 --- !u!114 &2047438609
 MonoBehaviour:
   m_ObjectHideFlags: 0
